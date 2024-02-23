@@ -64,11 +64,12 @@ body * {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+
+  animation: modeThemeP 0.4s forwards;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: modeTheme 0.4s forwards;
 }
 
 #switch span {
@@ -167,5 +168,24 @@ footer {
   }
   .light {
     --bg-url: url(./source/assets/bg-desktop-light.jpg);
+  }
+}
+
+
+@keyframes modeTheme {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%
+  }
+}
+
+@keyframes modeThemeP {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
